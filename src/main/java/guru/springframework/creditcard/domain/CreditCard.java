@@ -11,7 +11,6 @@ import jakarta.persistence.Id;
 @Entity
 public class CreditCard {
 	
-	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
