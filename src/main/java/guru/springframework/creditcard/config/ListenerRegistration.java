@@ -12,7 +12,7 @@ import guru.springframework.creditcard.listeners.PostLoadListener;
 import guru.springframework.creditcard.listeners.PreInsertListener;
 import guru.springframework.creditcard.listeners.PreUpdateListener;
 
-@Component
+//@Component
 public class ListenerRegistration implements BeanPostProcessor{
 	
 	private final PostLoadListener postLoadListener;
@@ -39,6 +39,7 @@ public class ListenerRegistration implements BeanPostProcessor{
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
 		// TODO Auto-generated method stub
 		
+		/*
 		if( bean instanceof LocalContainerEntityManagerFactoryBean) {
 			LocalContainerEntityManagerFactoryBean lemf = (LocalContainerEntityManagerFactoryBean) bean;
 			SessionFactoryImpl sessionFactory = (SessionFactoryImpl) lemf.getNativeEntityManagerFactory();
@@ -48,6 +49,7 @@ public class ListenerRegistration implements BeanPostProcessor{
 			registry.appendListeners(EventType.PRE_INSERT, preInsertListener);
 			registry.appendListeners(EventType.PRE_UPDATE, preUpdateListener);
 		}
+		*/
 		
 		//return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
 		return bean;
